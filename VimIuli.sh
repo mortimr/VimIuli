@@ -1,6 +1,6 @@
 #! /bin/sh
 
-echo "build-essential cmake python-dev python3-dev needs to be installed before this"
+echo "build-essential cmake python-dev python3-dev exhuberant-ctags needs to be installed first"
 sleep 3
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim

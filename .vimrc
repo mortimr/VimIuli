@@ -10,6 +10,7 @@
 "      ░                                         
 
 
+let mapleader="'"
 " Vim Plugged
 call plug#begin('~/.vim/plugged')
 
@@ -41,6 +42,23 @@ let g:gitgutter_sign_column_always = 1
 Plug 'Valloric/YouCompleteMe'
 Plug 'rdnetto/YCM-Generator', { 'branch': 'stable'}
 let g:ycm_global_ycm_extra_conf = '~/.vimymc'
+let g:ycm_confirm_extra_conf = 0
+nnoremap <C-]> <C-w><C-]><C-w>T
+nnoremap <Leader>] :YcmGenerateConfig<CR> <bar> :TagsGenerate!<CR>
+
+" Easy Motion
+Plug 'easymotion/vim-easymotion'
+map  / <Plug>(easymotion-sn)
+omap / <Plug>(easymotion-tn)
+map <Leader>l <Plug>(easymotion-lineforward)
+map <Leader>j <Plug>(easymotion-j)
+map <Leader>k <Plug>(easymotion-k)
+map <Leader>h <Plug>(easymotion-linebackward)
+let g:EasyMotion_smartcase = 1
+nmap <Leader>s <Plug>(easymotion-overwin-f)
+
+" Ctags
+Plug 'szw/vim-tags'
 
 call plug#end()
 " Style
@@ -85,6 +103,8 @@ vnoremap : ;
 nnoremap <C-H> :tabprevious<CR>
 nnoremap <C-L> :tabnext<CR>
 
+
 " Settings
 set timeoutlen=1000 ttimeoutlen=0
-
+set exrc
+set secure
