@@ -1,5 +1,7 @@
 #! /bin/sh
 
+echo "build-essential cmake python-dev python3-dev needs to be installed before this"
+sleep 3
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 mkdir ~/.vim/colors
