@@ -11,6 +11,19 @@
 
 
 let mapleader="'"
+
+" Tabulations
+set smartcase
+set autoindent smartindent
+set smarttab
+set tabstop=8
+set noexpandtab
+set listchars=tab:··
+set backspace=eol,start,indent
+set autoindent
+set shiftwidth=2
+set softtabstop=2
+
 " Vim Plugged
 call plug#begin('~/.vim/plugged')
 
@@ -60,6 +73,10 @@ nmap <Leader>s <Plug>(easymotion-overwin-f)
 " Ctags
 Plug 'szw/vim-tags'
 
+" TagBar
+Plug 'majutsushi/tagbar'
+nnoremap <F8> :TagbarToggle<CR>
+
 call plug#end()
 " Style
 colorscheme wombat256
@@ -74,18 +91,6 @@ set relativenumber
 hi Normal ctermbg=234
 hi MatchParen cterm=bold ctermfg=red
 highlight CursorLine ctermbg=238
-
-" Tabulations
-set smartcase
-set autoindent smartindent
-set smarttab
-set tabstop=8
-set noexpandtab
-set listchars=tab:··
-set backspace=eol,start,indent
-set autoindent
-set shiftwidth=2
-set softtabstop=2
 
 " KeyBindings
 inoremap <Up>	<NOP>
@@ -108,3 +113,7 @@ nnoremap <C-L> :tabnext<CR>
 set timeoutlen=1000 ttimeoutlen=0
 set exrc
 set secure
+nnoremap j gj
+nnoremap k gk
+set nobackup
+set noswapfile
