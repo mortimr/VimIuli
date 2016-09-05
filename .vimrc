@@ -91,6 +91,8 @@ set relativenumber
 hi Normal ctermbg=234
 hi MatchParen cterm=bold ctermfg=red
 highlight CursorLine ctermbg=238
+highlight LineNr ctermbg=232
+highlight NoText ctermbg=232 ctermfg=232
 
 " KeyBindings
 inoremap <Up>	<NOP>
