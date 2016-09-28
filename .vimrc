@@ -109,7 +109,7 @@ vnoremap ; :
 vnoremap : ;
 nnoremap <C-H> :tabprevious<CR>
 nnoremap <C-L> :tabnext<CR>
-
+nnoremap <Space> gg=G''
 
 " Settings
 set timeoutlen=1000 ttimeoutlen=0
