@@ -91,9 +91,11 @@ set list
 set relativenumber
 hi Normal ctermbg=234
 hi MatchParen cterm=bold ctermfg=red
-highlight CursorLine ctermbg=238
-highlight LineNr ctermbg=232
-highlight NoText ctermbg=232 ctermfg=232
+highlight CursorLine ctermbg=238                                                
+highlight LineNr ctermbg=232                                                    
+highlight nonText ctermbg=232 ctermfg=232                                       
+highlight ColorColumn ctermbg=66
+
 
 " KeyBindings
 inoremap <Up>	<NOP>
