@@ -37,6 +37,7 @@ nnoremap <F12> :EpiHeader<CR>
 Plug 'scrooloose/nerdtree'
 noremap <F2> :NERDTreeToggle<CR>
 nnoremap <C-M> :NERDTreeFocus<CR>
+let NERDTreeQuitOnOpen=1
 
 " Airline
 Plug 'vim-airline/vim-airline'
