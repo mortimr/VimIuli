@@ -1,7 +1,6 @@
 #! /bin/sh
 
-echo "build-essential cmake python-dev python3-dev exhuberant-ctags needs to be installed first"
-sleep 3
+sudo apt-get install build-essential cmake python-dev python3-dev exuberant-ctags clang -y
 curl -fLo ~/.vim/autoload/plug.vim --create-dirs \
     https://raw.githubusercontent.com/junegunn/vim-plug/master/plug.vim
 mkdir ~/.vim/colors
