@@ -27,6 +27,10 @@ set softtabstop=2
 " Vim Plugged
 call plug#begin('~/.vim/plugged')
 
+Plug 'octol/vim-cpp-enhanced-highlight'
+let g:cpp_class_scope_highlight = 1
+let g:cpp_concepts_highlight = 1
+
 " Epitech
 Plug 'LeBarbu/vim-epitech'
 let g:epi_login = 'rotaru_i'
@@ -37,7 +41,6 @@ nnoremap <F12> :EpiHeader<CR>
 Plug 'scrooloose/nerdtree'
 noremap <F2> :NERDTreeToggle<CR>
 nnoremap <C-M> :NERDTreeFocus<CR>
-let NERDTreeQuitOnOpen=1
 
 " Airline
 Plug 'vim-airline/vim-airline'
@@ -59,6 +62,7 @@ let g:ycm_global_ycm_extra_conf = '~/.vimymc'
 let g:ycm_confirm_extra_conf = 0
 nnoremap <C-]> <C-w><C-]><C-w>T
 nnoremap <Leader>] :YcmGenerateConfig<CR> <bar> :TagsGenerate!<CR>
+autocmd CompleteDone * pclose
 
 " Easy Motion
 Plug 'easymotion/vim-easymotion'
@@ -90,13 +94,11 @@ set colorcolumn=80
 set list
 set relativenumber
 hi Normal ctermbg=234
-hi MatchParen cterm=bold ctermfg=red
+hi MatchParen cterm=bold ctermfg=green
 highlight CursorLine ctermbg=238                                                
-highlight LineNr ctermbg=232                                                    
+highlight LineNr ctermbg=232                                                                                                                                                                  
 highlight nonText ctermbg=232 ctermfg=232                                       
 highlight ColorColumn ctermbg=66
-
-
 " KeyBindings
 inoremap <Up>	<NOP>
 inoremap <Down>	  <NOP>
@@ -122,3 +124,7 @@ nnoremap j gj
 nnoremap k gk
 set nobackup
 set noswapfile
+set guioptions -=m
+set guioptions -=r
+set guioptions -=L
+set guioptions -=T
