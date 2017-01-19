@@ -50,6 +50,8 @@ set laststatus=2
 let g:airline_powerline_fonts = 1
 let g:airline_theme='bubblegum'
 
+Plug 'scrooloose/nerdcommenter'
+
 " GitGutter
 Plug 'airblade/vim-gitgutter'
 set updatetime=250
@@ -128,3 +130,6 @@ set guioptions -=m
 set guioptions -=r
 set guioptions -=L
 set guioptions -=T
+
+let g:ycm_always_populate_location_list = 1
+nnoremap <F1> :lnext <CR>
