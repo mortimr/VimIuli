@@ -96,11 +96,11 @@ set colorcolumn=80
 set list
 set relativenumber
 hi Normal ctermbg=234
-hi MatchParen cterm=bold ctermfg=green
-highlight CursorLine ctermbg=238                                                
-highlight LineNr ctermbg=232                                                                                                                                                                  
-highlight nonText ctermbg=232 ctermfg=232                                       
-highlight ColorColumn ctermbg=66
+hi MatchParen cterm=bold ctermfg=green gui=bold guifg=#42adf4
+highlight CursorLine ctermbg=238
+highlight LineNr ctermbg=232
+highlight nonText ctermbg=232 ctermfg=232 guibg=black guifg=black
+highlight ColorColumn ctermbg=66 guibg=#42adf4
 " KeyBindings
 inoremap <Up>	<NOP>
 inoremap <Down>	  <NOP>
@@ -130,6 +130,7 @@ set guioptions -=m
 set guioptions -=r
 set guioptions -=L
 set guioptions -=T
+
 
 let g:ycm_always_populate_location_list = 1
 nnoremap <F1> :lnext <CR>
